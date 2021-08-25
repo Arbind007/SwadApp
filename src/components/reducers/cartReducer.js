@@ -4,6 +4,7 @@ import Item3 from "../../images/item3.jpg";
 import Item4 from "../../images/item4.jpg";
 import Item5 from "../../images/item5.jpg";
 import Item6 from "../../images/item6.jpg";
+import { ADD_TO_CART } from "../actions/action-types/cart-actions";
 
 const initState = {
   items: [
@@ -60,6 +61,27 @@ const initState = {
   total: 0,
 };
 const cartReducer = (state = initState, action) => {
-  return state;
+  if (action.type === ADD_TO_CART) {
+    let addedItem = state.items.find((item) => item.id === action.id);
+    let existingItems = state.addedItems.find((item) => action.id === item.id);
+    console.log(state.total);
+    if (existingItems) {
+      addedItem.quantity += 1;
+      return {
+        ...state,
+        total: state.total + addedItem.price,
+      };
+    } else {
+      addedItem.quantity = 1;
+      let newtotal = state.total + addedItem.price;
+      return {
+        ...state,
+        addedItems: [...state.addedItems, addedItem],
+        total: newtotal,
+      };
+    }
+  } else {
+    return state;
+  }
 };
 export default cartReducer;

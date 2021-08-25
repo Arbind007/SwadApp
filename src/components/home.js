@@ -1,8 +1,12 @@
 import React, { Component } from "react";
 import "../components/home.css";
 import { connect } from "react-redux";
+import { addToCart } from "./actions/cartActions";
 
 class home extends Component {
+  handleClick = (id) => {
+    this.props.addToCart(id);
+  };
   render() {
     let itemList = this.props.items.map((item) => {
       return (
@@ -16,17 +20,20 @@ class home extends Component {
             <p>{item.desc}</p>
             <button
               type="button"
-              class="btn pmd-btn-raised pmd-ripple-effect btn-danger"
+              className="btn pmd-btn-raised pmd-ripple-effect btn-danger"
+              onClick={() => {
+                this.handleClick(item.id);
+              }}
             >
-              Add to Cart
+              ADD
             </button>
           </div>
         </div>
       );
     });
     return (
-      <div className="container text-center my-2 py-2">
-        <h3 className="center">Our items</h3>
+      <div className="container text-center my-5 py-2">
+        <h2 className="center">Our items</h2>
         <div className="row my-4 pt-4">{itemList}</div>
       </div>
     );
@@ -39,4 +46,12 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps)(home);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addToCart: (id) => {
+      dispatch(addToCart(id));
+    },
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(home);
