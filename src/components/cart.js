@@ -33,7 +33,7 @@ class Cart extends Component {
       <p>Nothing.</p>
     );
     return (
-      <div className="container shadow">
+      <div className="container shadow my-3">
         <div className="cart">
           <h5>You have ordered:</h5>
           <div>{addedItems}</div>

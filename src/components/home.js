@@ -25,7 +25,7 @@ class home extends Component {
                 this.handleClick(item.id);
               }}
             >
-              ADD
+              Add To Cart
             </button>
           </div>
         </div>
