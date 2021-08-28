@@ -33,7 +33,6 @@ class Cart extends Component {
                 <h3>Price: ${item.price}</h3>
                 <h4>
                   <Link to="/cart">
-                    {" "}
                     <i
                       class="fas fa-minus-circle"
                       onClick={() => {
