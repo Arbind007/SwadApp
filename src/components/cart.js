@@ -1,7 +1,24 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import {
+  removeItem,
+  addQuantity,
+  subtractQuantity,
+} from "./actions/cartActions";
 import { Link } from "react-router-dom";
 class Cart extends Component {
+  handleRemove = (id) => {
+    this.props.removeItem(id);
+  };
+
+  handleSubtractQuantity = (id) => {
+    this.props.subtractQuantity(id);
+  };
+
+  handleAddQuantity = (id) => {
+    this.props.addQuantity(id);
+  };
+
   render() {
     let addedItems = this.props.items.length ? (
       this.props.items.map((item) => {
@@ -13,13 +30,35 @@ class Cart extends Component {
               </div>
               <div className="col-12 col-md-8">
                 <h2>{item.title}</h2>
-                <h5>Price: ${item.price}</h5>
-                <h6>Quantity: {item.quantity}</h6>
+                <h3>Price: ${item.price}</h3>
+                <h4>
+                  <Link to="/cart">
+                    {" "}
+                    <i
+                      class="fas fa-minus-circle"
+                      onClick={() => {
+                        this.handleSubtractQuantity(item.id);
+                      }}
+                    ></i>{" "}
+                  </Link>
+                  &nbsp; Quantity: {item.quantity} &nbsp;
+                  <Link to="/cart">
+                    <i
+                      class="fas fa-plus-circle"
+                      onClick={() => {
+                        this.handleAddQuantity(item.id);
+                      }}
+                    ></i>
+                  </Link>
+                </h4>
                 {item.desc}
                 <div>
                   <button
                     type="button"
                     className="btn pmd-btn-raised pmd-ripple-effect btn-danger my-2"
+                    onClick={() => {
+                      this.handleRemove(item.id);
+                    }}
                   >
                     Delete
                   </button>
@@ -49,4 +88,18 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps)(Cart);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    removeItem: (id) => {
+      dispatch(removeItem(id));
+    },
+    addQuantity: (id) => {
+      dispatch(addQuantity(id));
+    },
+    subtractQuantity: (id) => {
+      dispatch(subtractQuantity(id));
+    },
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Cart);
