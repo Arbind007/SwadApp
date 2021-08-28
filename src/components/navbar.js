@@ -13,10 +13,7 @@ const Navbar = () => {
 
         <div className="collapse navbar-collapse flex-grow-0" id="collapseNav">
           <div className="navbar-nav">
-            <Link
-              to="/cart"
-              className="navbar-brand text-light mx-5 h3 my-auto"
-            >
+            <Link to="/" className="navbar-brand text-light mx-5 h3 my-auto">
               <h4> Shop </h4>
             </Link>
             <Link to="/cart" className="text-light mx-2 h3 my-auto">
