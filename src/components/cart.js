@@ -39,7 +39,7 @@ class Cart extends Component {
                       onClick={() => {
                         this.handleSubtractQuantity(item.id);
                       }}
-                    ></i>{" "}
+                    ></i>
                   </Link>
                   &nbsp; Quantity: {item.quantity} &nbsp;
                   <Link to="/cart">

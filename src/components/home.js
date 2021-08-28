@@ -20,7 +20,7 @@ class home extends Component {
             <p>{item.desc}</p>
             <button
               type="button"
-              className="btn pmd-btn-raised pmd-ripple-effect btn-danger"
+              className="btn pmd-btn-raised pmd-ripple-effect btn-danger waves-effect"
               onClick={() => {
                 this.handleClick(item.id);
               }}
