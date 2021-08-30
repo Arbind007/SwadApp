@@ -11,7 +11,7 @@ class Checkout extends Component {
             <div className="row text-center align-items-center ">
               <div className="col-12 col-md-4 mx-2">
                 <div class="form-group">
-                  <label for="InputEmail1">Email address</label>
+                  <h5>Email address</h5>
                   <input
                     type="email"
                     class="form-control"
