@@ -75,6 +75,11 @@ class Cart extends Component {
         <div className="cart">
           <h5>You have ordered:</h5>
           <div>{addedItems}</div>
+          <Link to="/checkout">
+            <button className="btn btn-outline-success my-3">
+              <h3>Check Out</h3>
+            </button>
+          </Link>
         </div>
       </div>
     );
