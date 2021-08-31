@@ -19,6 +19,12 @@ class Cart extends Component {
     this.props.addQuantity(id);
   };
 
+  redirect = () => {
+    if (this.props.quantity !== 0) {
+      this.props.history.push("/checkout");
+    }
+  };
+
   render() {
     let addedItems = this.props.items.length ? (
       this.props.items.map((item) => {
@@ -75,11 +81,15 @@ class Cart extends Component {
         <div className="cart">
           <h5>You have ordered:</h5>
           <div>{addedItems}</div>
-          <Link to="/checkout">
-            <button className="btn btn-outline-success my-3">
-              <h3>Check Out</h3>
-            </button>
-          </Link>
+
+          <button
+            className="btn btn-outline-success my-3"
+            onClick={() => {
+              this.redirect();
+            }}
+          >
+            <h3>Check Out</h3>
+          </button>
         </div>
       </div>
     );
@@ -89,6 +99,7 @@ class Cart extends Component {
 const mapStateToProps = (state) => {
   return {
     items: state.addedItems,
+    quantity: state.quantity,
   };
 };
 

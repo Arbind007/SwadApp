@@ -5,10 +5,7 @@ import { connect } from "react-redux";
 class Navbar extends Component {
   render() {
     return (
-      <nav
-        className="navbar navbar-expand-sm navbar-dark bg-dark justify-content-between"
-        id="ram"
-      >
+      <nav className="navbar navbar-expand-sm navbar-dark bg-dark justify-content-between">
         <div className="container my-2">
           <Link to="/" className="navbar-brand text-white font-weight-bold ">
             <h2> Shopping App</h2>
@@ -25,8 +22,17 @@ class Navbar extends Component {
               <Link to="/cart" className="text-light mx-2 h3 my-auto">
                 <i class="fas fa-shopping-cart"></i>
               </Link>
-              <div class="rounded-pill mx-2 my-2 px-2 bg-white">
-                <h2 className="text-dark mx-2 my-auto">{this.props.total}</h2>
+              <div
+                style={{
+                  position: "relative",
+                  right: "6.0%",
+                  height: "1rem",
+                  top: "-0.6rem",
+                }}
+              >
+                <div className="rounded-pill  my-2  bg-white">
+                  <h6 className="text-dark mx-2 my-auto">{this.props.total}</h6>
+                </div>
               </div>
             </div>
           </div>

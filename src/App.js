@@ -1,5 +1,5 @@
 import Navbar from "../src/components/navbar";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 import home from "../src/components/home";
 import cart from "../src/components/cart";
 import checkout from "../src/components/checkout";
