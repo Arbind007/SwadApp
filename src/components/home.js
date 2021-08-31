@@ -36,7 +36,6 @@ class home extends Component {
       <div className="container text-center my-5 py-2">
         <h2 className="center">Our items</h2>
         <div className="row my-4 pt-4">{itemList}</div>
-        <h1>hello{this.props.total}</h1>
       </div>
     );
   }
