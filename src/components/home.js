@@ -21,6 +21,7 @@ class home extends Component {
             <button
               type="button"
               className="btn pmd-btn-raised pmd-ripple-effect btn-danger waves-effect"
+              id="dam"
               onClick={() => {
                 this.handleClick(item.id);
               }}
