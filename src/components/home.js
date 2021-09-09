@@ -10,10 +10,18 @@ class home extends Component {
   render() {
     let itemList = this.props.items.map((item) => {
       return (
-        <div className="col-12 col-md-4 py-4 zoom">
+        <div className="col-12 col-md-4 py-4 ">
           <div className="card-body" key={item.id}>
-            <div className="bg-image ">
-              <img className=" img-fluid" src={item.img} alt={item.title} />
+            <div
+              className="bg-image overflow-hidden"
+              style={{ width: 400, height: 400 }}
+            >
+              <img
+                className=" img-fluid zoom "
+                src={item.img}
+                alt={item.title}
+                style={{ width: 400, height: 400 }}
+              />
             </div>
             <h4 className="card-title ">{item.title}</h4>
             <h6>Price: ${item.price}</h6>
@@ -33,9 +41,11 @@ class home extends Component {
       );
     });
     return (
-      <div className="container text-center my-5 py-2">
-        <h2 className="center">Our items</h2>
-        <div className="row my-4 pt-4">{itemList}</div>
+      <div style={{ backgroundColor: "whilte" }}>
+        <div className="container text-center py-2 overflow-hidden">
+          <h2 className="center">Our items</h2>
+          <div className="row my-4 pt-4">{itemList}</div>
+        </div>
       </div>
     );
   }

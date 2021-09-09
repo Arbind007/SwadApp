@@ -29,10 +29,15 @@ class Cart extends Component {
     let addedItems = this.props.items.length ? (
       this.props.items.map((item) => {
         return (
-          <div className="overflow-hidden" key={item.id}>
+          <div className="overflow-hidden my-5" key={item.id}>
             <div className="row text-center align-items-center ">
               <div className="col-12 col-md-4">
-                <img src={item.img} alt={item.img} className="" />
+                <img
+                  src={item.img}
+                  alt={item.img}
+                  className=""
+                  style={{ width: 450, height: 400 }}
+                />
               </div>
               <div className="col-12 col-md-8">
                 <h2>{item.title}</h2>

@@ -1,9 +1,37 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+import axios from "axios";
 //import { addShipping } from './actions/cartActions'
+
 class Checkout extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: " ",
+      email: "",
+      address: "",
+    };
+  }
+
   render() {
+    const handleChange = (event) => {
+      this.setState({ name: event.target.value });
+    };
+    const handleChange2 = (event) => {
+      this.setState({ email: event.target.value });
+    };
+    const handleChange3 = (event) => {
+      this.setState({ address: event.target.value });
+    };
+    const onSubmitHandler = () => {
+      var data = {};
+      data.order = this.props.addedItems;
+      data.name = this.state.name;
+      data.email = this.state.email;
+      data.addess = this.state.address;
+      axios.post("http://localhost:5000/getorders", data);
+    };
     return (
       <div className="my-5">
         <div className="container shadow">
@@ -11,11 +39,19 @@ class Checkout extends Component {
             <div className="row text-center align-items-center ">
               <div className="col-12 col-md-4 mx-2">
                 <div class="form-group">
+                  <h5>Name</h5>
+                  <input
+                    type="Name"
+                    className="form-control"
+                    placeholder="Enter your name "
+                    onChange={handleChange}
+                  ></input>
                   <h5>Email address</h5>
                   <input
                     type="email"
-                    class="form-control"
+                    className="form-control"
                     placeholder="Enter your email "
+                    onChange={handleChange2}
                   ></input>
                   <small id="emailHelp" class="form-text text-muted">
                     We'll never share your email with anyone else.
@@ -27,6 +63,7 @@ class Checkout extends Component {
                     class="form-control"
                     rows="3"
                     placeholder="Enter your address"
+                    onChange={handleChange3}
                   ></textarea>
                 </div>
               </div>
@@ -41,11 +78,15 @@ class Checkout extends Component {
               <h4>Edit Your order</h4>
             </button>
           </Link>
-          <Link to="/">
-            <button type="button" className="btn btn-success">
-              <h4>Place Order</h4>
-            </button>
-          </Link>
+          {/* <Link to=""> */}
+          <button
+            type="button"
+            className="btn btn-success"
+            onClick={() => onSubmitHandler()}
+          >
+            <h4>Place Order</h4>
+          </button>
+          {/* </Link> */}
         </div>
       </div>
     );

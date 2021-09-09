@@ -15,7 +15,7 @@ const initState = {
   items: [
     {
       id: 1,
-      title: "Winter body",
+      title: "French Toast",
       desc:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
       price: 110,
@@ -23,7 +23,7 @@ const initState = {
     },
     {
       id: 2,
-      title: "Adidas",
+      title: "Pasta",
       desc:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
       price: 80,
@@ -31,7 +31,7 @@ const initState = {
     },
     {
       id: 3,
-      title: "Vans",
+      title: "Spring Roll",
       desc:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
       price: 120,
@@ -39,7 +39,7 @@ const initState = {
     },
     {
       id: 4,
-      title: "White",
+      title: "Soup",
       desc:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
       price: 260,
@@ -47,7 +47,7 @@ const initState = {
     },
     {
       id: 5,
-      title: "Cropped-sho",
+      title: "Pan Cake",
       desc:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
       price: 160,
@@ -55,7 +55,7 @@ const initState = {
     },
     {
       id: 6,
-      title: "Blues",
+      title: "Steak",
       desc:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
       price: 90,
