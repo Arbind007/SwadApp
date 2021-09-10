@@ -7,7 +7,7 @@ function Allorder() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/allorder")
+      .get("https://swadfoodapp.herokuapp.com/allorder")
       .then((res) => {
         setPosts(res.data);
       })
@@ -16,15 +16,30 @@ function Allorder() {
       });
   }, []);
   return (
-    <div className="text-center ">
-      All Orders
-      <div className="">
+    <div>
+    <div className="text-center my-5 ">
+     <h1> All Orders </h1>
+     </div>
+    <table className="table table-striped ">
+    <thead className="bg-dark text-white">
+    <tr>
+      <th scope="col"><h3>Name</h3></th>
+      <th scope="col"><h3>Email</h3></th>
+      <th scope="col"><h3>Address</h3></th>
+      <th scope="col"><h3>Orders</h3></th>
+    </tr>
+    </thead>
+    <tbody>
         {posts.map((post) => (
-          <div>
-            {post.name} - {post.email} - {post.address} - {post.order}
-          </div>
+          <tr className="">
+          <th scope="row">{post.name}</th>
+          <th scope="row">{post.email}</th>
+          <th scope="row">{post.address}</th>
+          <th scope="row">{post.order}</th>
+          </tr>
         ))}
-      </div>
+      </tbody>
+      </table>
     </div>
   );
 }

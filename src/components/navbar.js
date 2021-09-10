@@ -17,8 +17,14 @@ class Navbar extends Component {
               id="collapseNav"
             >
               <div className="navbar-nav">
+              <Link
+                  to="/allorders"
+                  className="navbar-brand text-light mx h3 my-auto"
+                >
+                  <h4> All Orders </h4>
+                </Link>
                 <Link
-                  to="/"
+                  to="/allorders"
                   className="navbar-brand text-light mx-5 h3 my-auto"
                 >
                   <h4> Menu </h4>
