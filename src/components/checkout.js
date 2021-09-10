@@ -32,7 +32,6 @@ class Checkout extends Component {
       data.addess = this.state.address;
       axios.post("https://swadfoodapp.herokuapp.com/getorders", data);
       this.props.history.push("/");
-      window.location.reload();
     };
     return (
       <div className="my-5">
@@ -80,7 +79,7 @@ class Checkout extends Component {
               <h4>Edit Your order</h4>
             </button>
           </Link>
-          
+
           <button
             type="button"
             className="btn btn-success"
@@ -88,7 +87,6 @@ class Checkout extends Component {
           >
             <h4>Place Order</h4>
           </button>
-          
         </div>
       </div>
     );
