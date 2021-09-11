@@ -1,9 +1,6 @@
-## Live at :- https://swadapp.netlify.app/
-
-
 <p align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="https://pnglux.com/wp-content/uploads/2021/03/1617168396_GitHub-logo-PNG-Image.png" alt="Logo" width="80" height="80">
+    <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.iconsdb.com%2Fwhite-icons%2Fgithub-6-icon.html&psig=AOvVaw0bblNxtj0DRI94yn97cKPE&ust=1631421345430000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCPCm3KOM9vICFQAAAAAdAAAAABAJ" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">The Swad App</h3>
