@@ -9,6 +9,21 @@
     Food Ordering App
     <br>
     <a href="https://swadapp.netlify.app/"><strong>Live At</strong></a>
-   
   </p>
-</p>
+  
+  
+### Introduction
+
+The Food Ordeing App consists of 4 pages. The home pages list out all the food items avilable in the menu so the user can select the desired item he/she wants to order. After selecting the items, the user can navigate to cart page to check all the items they have selected with the quantity of the items respectively(can also delete a item). After that they can add the name, email and address and place the order. You can check all orders in the All Orders Tab present in the Navbar.
+
+
+### Technology we will be using: 
+
+#### - [x]  React.js  
+#### - [x]  Redux-Saga
+#### - [x]  BootStrap
+#### - [x]  Node.js
+#### - [x]  Express
+#### - [x]  MongoDB
+#### - [x]  Mongoose
+
