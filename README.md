@@ -31,6 +31,16 @@ The Food Ordeing App consists of 4 pages. The home pages list out all the food i
 ### Preview of the Web App
 
 #### Home Page
+<img width="1440" alt="Screenshot 2021-09-11 at 10 57 09 AM" src="https://user-images.githubusercontent.com/56961555/132937353-2c73b7f4-1544-4dbc-aaf2-5d6947e2e538.png">
+
+#### Cart Page
+<img width="1440" alt="Screenshot 2021-09-11 at 10 58 28 AM" src="https://user-images.githubusercontent.com/56961555/132937381-db396823-e30a-4928-9a62-6981e5f678d5.png">
+
+#### CheckOut Page
+<img width="1440" alt="Screenshot 2021-09-11 at 11 00 04 AM" src="https://user-images.githubusercontent.com/56961555/132937411-2509ff20-bbe1-43d1-b876-b97557cbc7fc.png">
+
+#### All Orders
+<img width="1440" alt="Screenshot 2021-09-11 at 11 05 17 AM" src="https://user-images.githubusercontent.com/56961555/132937505-7fa4e98f-bd1a-44ea-9fcd-5c75a7812fc4.png">
 
 
 ### Crafted By 
