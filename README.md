@@ -19,11 +19,11 @@ The Food Ordeing App consists of 4 pages. The home pages list out all the food i
 
 ### Technology we will be using: 
 
-<h4> - [x]  React.js    </h4>
-<h4> - [x]  Redux-Saga  </h4>
-<h4> - [x]  BootStrap   </h4>
-<h4> - [x]  Node.js     </h4>
-<h4> - [x]  Express     </h4>
-<h4> - [x]  MongoDB     </h4>
-<h4> - [x]  Mongoose    </h4>
+- [x]  React.js    
+- [x]  Redux-Saga  
+- [x]  BootStrap   
+- [x]  Node.js    
+- [x]  Express     
+- [x]  MongoDB     
+- [x]  Mongoose    
 
