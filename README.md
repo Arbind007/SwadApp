@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="https://cdn.dribbble.com/users/723155/screenshots/4572417/git.jpg?compress=1&resize=400x300" alt="Logo" >
+    <img src="https://cdn.dribbble.com/users/723155/screenshots/4572417/git.jpg?compress=1&resize=400x300" alt="Logo" width="150" height="100">
   </a>
 
   <h3 align="center">The Swad App</h3>
