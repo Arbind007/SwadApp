@@ -4,7 +4,7 @@ import home from "../src/components/home";
 import cart from "../src/components/cart";
 import checkout from "../src/components/checkout";
 import allorders from "../src/components/allorders";
-
+import React from 'react';
 import "./App.css";
 
 function App() {
